@@ -15,6 +15,12 @@ export default function SearchLayout() {
                     headerTitle: "Book details"
                 }}
             />
+            <Stack.Screen
+                name="addToShelf"
+                options={{
+                    headerTitle: "Add to bookshelf"
+                }}
+            />
         </Stack>
     );
 }

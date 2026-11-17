@@ -1,4 +1,5 @@
 import { useLocalSearchParams } from 'expo-router';
+import { router } from 'expo-router';
 import { StyleSheet, Text, View, Pressable } from 'react-native';
 import DetailsScreen from '../../components/DetailsScreen';
 
@@ -12,7 +13,10 @@ export default function BookDetails() {
                 <DetailsScreen isbn={isbn} />
 
                 <Pressable
-                    onPress={() => console.log("add pressed")}
+                    onPress={() => router.push({
+                        pathname: "./addToShelf",
+                        params: { isbn: isbn }
+                    })}
                     style={({ pressed }) => [
                         {
                             backgroundColor: pressed ? '#bebebe' : '#d4d4d4'
