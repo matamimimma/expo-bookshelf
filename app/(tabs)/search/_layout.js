@@ -10,7 +10,7 @@ export default function SearchLayout() {
                 }}
             />
             <Stack.Screen
-                name="[id]"
+                name="[isbn]"
                 options={{
                     headerTitle: "Book details"
                 }}

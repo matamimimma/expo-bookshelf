@@ -10,7 +10,7 @@ export default function UserLayout() {
                 }}
             />
             <Stack.Screen
-                name="[id]"
+                name="[isbn]"
                 options={{
                     headerTitle: "Book details"
                 }}

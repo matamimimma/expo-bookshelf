@@ -1,5 +1,5 @@
 import { useLocalSearchParams } from 'expo-router';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Pressable } from 'react-native';
 import DetailsScreen from '../../components/DetailsScreen';
 
 export default function BookDetails() {
@@ -10,6 +10,17 @@ export default function BookDetails() {
             <View style={styles.container}>
                 <Text>SEARCH / BOOK DETAILS</Text>
                 <DetailsScreen isbn={isbn} />
+
+                <Pressable
+                    onPress={() => console.log("add pressed")}
+                    style={({ pressed }) => [
+                        {
+                            backgroundColor: pressed ? '#bebebe' : '#d4d4d4'
+                        },
+                        styles.button
+                    ]}>
+                    <Text>Add to bookshelf</Text>
+                </Pressable>
             </View>
         </View>
     )
@@ -32,5 +43,14 @@ const styles = StyleSheet.create({
         gap: 5,
         padding: 13,
         borderRadius: 8
+    },
+    button: {
+        borderWidth: 1,
+        borderColor: '#002a46',
+        borderRadius: 5,
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: '40%',
+        padding: 8,
     },
 });

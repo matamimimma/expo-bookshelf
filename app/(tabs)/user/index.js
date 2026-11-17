@@ -58,7 +58,7 @@ export default function User() {
             coverUrl: 'https://covers.openlibrary.org/b/id/8569284-M.jpg',
         },
     ]
-    const detailsPath = '../(tabs)/user/[id]';
+    const detailsPath = '../(tabs)/user/[isbn]';
     const [input, setInput] = useState('');
 
     return (

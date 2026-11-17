@@ -57,7 +57,7 @@ export default function Search() {
         },
     ]
 
-    const detailsPath = '../(tabs)/search/[id]'
+    const detailsPath = '../(tabs)/search/[isbn]'
     const [input, setInput] = useState('');
 
     return (
